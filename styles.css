@@ -1,13 +1,77 @@
-#medium-posts {
-  margin: 20px;
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
+/* Header Styles */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Medium Posts Section */
+#medium-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Post Card Styles */
 .medium-post {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
 }
 
 .medium-post img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.medium-post h3 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.medium-post p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 10px;
+}
+
+.medium-post a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.medium-post a:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
 }
