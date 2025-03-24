@@ -8,10 +8,6 @@ async function displayMediumPosts() {
     const postsContainer = document.getElementById("medium-posts");
 
     if (data.items && data.items.length > 0) {
-      let thumbnail =
-        post.thumbnail && post.thumbnail !== ""
-          ? post.thumbnail
-          : "default-thumbnail.jpg";
       data.items.forEach((post) => {
         // Extract thumbnail from content
         let thumbnail = post.thumbnail;
