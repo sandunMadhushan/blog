@@ -40,6 +40,14 @@ header h1 {
   margin-bottom: 40px;
 }
 
+header h1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header h1 a:hover {
+  color: #e94560;
+}
+
 /* Post Card Styles */
 .medium-post {
   background-color: #1e293b;
