@@ -1,7 +1,7 @@
 async function displayMediumPosts() {
   // Use a proxy server to bypass CORS restrictions
-  const mediumRSS =
-    "https://cors-anywhere.herokuapp.com/https://medium.com/feed/@sandunmadhushan";
+  const proxy = "https://cors-anywhere.herokuapp.com/";
+  const mediumRSS = `${proxy}https://medium.com/feed/@sandunmadhushan`;
 
   try {
     const response = await fetch(
@@ -17,7 +17,7 @@ async function displayMediumPosts() {
         postElement.className = "medium-post";
 
         // Handle missing thumbnails
-        const thumbnail = post.thumbnail || "images/default-thumbnail.png";
+        const thumbnail = post.thumbnail || "images/default-thumbnail.jpg"; // Replace with default image path
 
         postElement.innerHTML = `
                   <img src="${thumbnail}" alt="${post.title}" />
