@@ -3,63 +3,78 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0f1b33; /* Dark blue background matching portfolio */
+  background-color: #0f172a; /* Dark blue background from portfolio */
   color: #ffffff;
 }
 
 /* Header Styles */
 header {
-  background-color: #0a192f;
+  background-color: #1a2238;
   color: white;
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
-  border-bottom: 1px solid #233554;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* Medium Posts Section */
 #medium-posts {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
-  padding: 20px;
+  padding: 50px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 #medium-posts h2 {
   width: 100%;
-  text-align: left;
-  color: #e94560;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#medium-posts h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #e94560;
 }
 
 /* Post Card Styles */
 .medium-post {
-  background-color: #112240;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #1e293b;
+  border-radius: 12px;
   overflow: hidden;
-  width: 300px;
+  width: 340px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 20px;
+  position: relative;
+  border: none;
 }
 
 .medium-post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .medium-post img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
   display: block;
 }
 
@@ -70,6 +85,11 @@ header h1 {
   margin: 0;
   font-size: 1.3rem;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.medium-post:hover h3 {
+  background-color: #ff6b8b;
 }
 
 .medium-post h3 a {
@@ -79,59 +99,58 @@ header h1 {
 
 .medium-post p {
   font-size: 0.9rem;
-  color: #8892b0;
+  color: #cbd5e1;
   margin: 0;
   padding: 15px;
   text-align: center;
 }
 
-.medium-post a {
+.medium-post a.read-more {
   display: block;
   text-align: center;
-  padding: 10px;
-  background-color: #233554;
-  color: white;
+  padding: 12px;
+  background-color: transparent;
+  color: #e94560;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
 }
 
-.medium-post a:hover {
-  background-color: #e94560;
+.medium-post a.read-more:hover {
+  background-color: rgba(233, 69, 96, 0.1);
+  color: #ff6b8b;
 }
 
 /* Footer Styles */
 footer {
   text-align: center;
-  padding: 15px;
-  background-color: #0a192f;
-  color: #8892b0;
-  border-top: 1px solid #233554;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 20px;
+  background-color: #1a2238;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   #medium-posts {
-    flex-direction: column;
-    align-items: center;
+    padding: 30px 15px;
   }
 
   .medium-post {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
 /* Message for No Posts */
 #medium-posts:empty::after {
   content: "No posts available.";
-  color: #8892b0;
+  color: #94a3b8;
   font-size: 1.2rem;
   text-align: center;
   width: 100%;
