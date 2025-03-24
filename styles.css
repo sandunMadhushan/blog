@@ -1,0 +1,13 @@
+#medium-posts {
+  margin: 20px;
+}
+
+.medium-post {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.medium-post img {
+  max-width: 100%;
+}
