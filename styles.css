@@ -13,14 +13,12 @@ header {
   color: white;
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
   margin: 0;
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
 /* Medium Posts Section */
@@ -40,19 +38,6 @@ header h1 {
   color: #ffffff;
   font-size: 2rem;
   margin-bottom: 40px;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-#medium-posts h2:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: #e94560;
 }
 
 /* Post Card Styles */
@@ -63,7 +48,6 @@ header h1 {
   width: 340px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  border: none;
 }
 
 .medium-post:hover {
@@ -79,47 +63,48 @@ header h1 {
 }
 
 .medium-post h3 {
-  background-color: #e94560;
-  color: white;
   padding: 15px;
   margin: 0;
   font-size: 1.3rem;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.medium-post:hover h3 {
-  background-color: #ff6b8b;
+  color: #e94560;
 }
 
 .medium-post h3 a {
-  color: white;
+  color: #e94560;
   text-decoration: none;
 }
 
-.medium-post p {
+.medium-post h3 a:hover {
+  text-decoration: underline;
+}
+
+.medium-post .description {
   font-size: 0.9rem;
   color: #cbd5e1;
   margin: 0;
-  padding: 15px;
-  text-align: center;
+  padding: 0 15px 15px;
+  line-height: 1.5;
 }
 
-.medium-post a.read-more {
+.medium-post p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+  padding: 0 15px 15px;
+}
+
+.medium-post .read-more {
   display: block;
   text-align: center;
   padding: 12px;
-  background-color: transparent;
-  color: #e94560;
+  background-color: #233554;
+  color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.medium-post a.read-more:hover {
-  background-color: rgba(233, 69, 96, 0.1);
-  color: #ff6b8b;
+.medium-post .read-more:hover {
+  background-color: #e94560;
 }
 
 /* Footer Styles */
@@ -128,7 +113,6 @@ footer {
   padding: 20px;
   background-color: #1a2238;
   color: #94a3b8;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */
@@ -145,14 +129,4 @@ footer {
   header h1 {
     font-size: 2.2rem;
   }
-}
-
-/* Message for No Posts */
-#medium-posts:empty::after {
-  content: "No posts available.";
-  color: #94a3b8;
-  font-size: 1.2rem;
-  text-align: center;
-  width: 100%;
-  padding: 50px 0;
 }
