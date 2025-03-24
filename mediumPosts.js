@@ -32,7 +32,10 @@ async function displayMediumPosts() {
                   <h3><a href="${post.link}" target="_blank">${
           post.title
         }</a></h3>
-                  <img src="${thumbnail}" alt="${post.title}" />
+                  <img src="${thumbnail}" alt="${post.title}" onError={(e) => {
+                    e.target.onerror = null; 
+                    e.target.src = "default-thumbnail.jpg";
+                  }}/>
                   <p class="description">${shortDescription}</p>
                   <p>Published on ${new Date(
                     post.pubDate
