@@ -1,13 +1,90 @@
-#medium-posts {
-  margin: 20px;
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e;
+  color: #ffffff;
 }
 
+/* Header Styles */
+header {
+  background-color: #16213e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Medium Posts Section */
+#medium-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Post Card Styles */
 .medium-post {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 15px;
+  background-color: #0f3460;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 300px;
 }
 
 .medium-post img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.medium-post h3 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #e94560;
+}
+
+.medium-post p {
+  font-size: 1rem;
+  color: #a5a5a5;
+  margin: 10px;
+}
+
+.medium-post a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #e94560;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.medium-post a:hover {
+  background-color: #ff6f91;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #16213e;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #medium-posts {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-bottom: auto;
+  }
 }
