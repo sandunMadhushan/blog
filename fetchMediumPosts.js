@@ -8,7 +8,7 @@ async function fetchMediumPosts(username) {
       title: post.title,
       link: post.link,
       pubDate: post.published,
-      thumbnail: post.enclosure?.url || "", // Optional thumbnail
+      thumbnail: post.enclosure?.url || "default-thumbnail.jpg", // Optional thumbnail
     }));
     console.log(posts);
     return posts;
