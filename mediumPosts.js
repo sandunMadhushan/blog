@@ -16,7 +16,7 @@ async function displayMediumPosts() {
         if (!thumbnail || thumbnail === "") {
           const imgRegex = /<img[^>]+src="([^">]+)"/;
           const match = post.content.match(imgRegex);
-          thumbnail = match ? match[1] : "default-thumbnail.png";
+          thumbnail = match ? match[1] : "default-thumbnail.jpg";
         }
 
         // Create short description (remove HTML tags and limit length)
